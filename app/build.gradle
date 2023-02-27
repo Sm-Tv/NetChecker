@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+ext.allowEdit = true
+ext.allowQr = true
+
+android {
+    compileSdkVersion versions.compileSdk
+
+    defaultConfig {
+        applicationId "ru.m4bank.networkchecker"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode projectVersionCode
+        versionName rootProject.version
+        testInstrumentationRunner deps.testInstrumentationRunner
+    }
+
+    buildTypes {
+        all {
+            buildConfigField("Boolean", "ALLOW_EDIT", "$allowEdit")
+            buildConfigField("Boolean", "ALLOW_QR", "$allowQr")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation deps.androidX.sdk.values()
+    implementation deps.androidX.coroutines.values()
+    implementation deps.zxing
+    implementation deps.prefsComponent
+    implementation deps.gson
+    implementation deps.design.material
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.androidTest
+}
+
+// DON'T REMOVE this task (used by CI flow)
+task printVersion {
+    doLast {
+        print android.defaultConfig.versionName
+    }
+}

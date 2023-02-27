@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NetChecker</string>
+    <string name="edit_text_hint">Enter Json value</string>
+    <string name="scanner_QR_code">QR</string>
+    <string name="verify">TEST</string>
+    <string name="reset">RESET</string>
+    <string name="error_json">Json has an error:</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="connection">OK</string>
+    <string name="disconnection">FAIL</string>
+    <string name="empty_edit_text">Json input field is empty.</string>
+</resources>

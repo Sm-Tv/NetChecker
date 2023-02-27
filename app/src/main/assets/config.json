@@ -1,0 +1,39 @@
+{
+  "servers": [
+    {
+      "name": "TMS",
+      "host": "core.demo.paymob.ru",
+      "port": 80
+    },
+    {
+      "name": "TMSERRR",
+      "host": "core.demo.paymober.ru",
+      "port": 80
+    },
+    {
+      "name": "SKY",
+      "host": "185.162.94.67",
+      "port": 22224
+    },
+    {
+      "name": "HUMO1",
+      "host": "217.174.185.218",
+      "port": 39640
+    },
+    {
+      "name": "HUMO2",
+      "host": "217.174.185.218",
+      "port": 39640
+    },
+    {
+      "name": "HUMO3",
+      "host": "217.174.185.218",
+      "port": 39640
+    },
+    {
+      "name": "HUMO4",
+      "host": "217.174.185.218",
+      "port": 39640
+    }
+  ]
+}
